@@ -1,0 +1,13 @@
+<div class="container pt-5">
+  <div class="card" style="width:100%">
+    <img class="card-img-top mx-auto" style="width:50%" src="assets/profile_male.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title"> {{profile.name}} </h4>
+      <pre class="card-text">{{profile.address.street}}, {{profile.address.suite}}
+{{profile.address.city}}, {{profile.address.zipcode}} </pre>
+      <p class="card-text"><b>Phone</b> {{profile.phone}} </p>
+      <p class="card-text"><b>Email</b> {{profile.email}} </p>
+      <button class="btn btn-light" (click)="logout()">Logout</button>
+    </div>
+  </div>
+</div>

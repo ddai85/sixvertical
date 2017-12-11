@@ -6,15 +6,21 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AppRoutingModule } from './/app-routing.module'; 
+import { HttpClientModule } from '@angular/common/http';
+import { ProfileComponent } from './profile/profile.component';
+import { PostsComponent } from './posts/posts.component'; 
 import { AuthService } from './authenticate.service';
-import { HttpClientModule } from '@angular/common/http'; 
+import { FetchDataService } from './fetch-data.service';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomepageComponent
+    HomepageComponent,
+    ProfileComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [ AuthService ],
+  providers: [ AuthService, FetchDataService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
