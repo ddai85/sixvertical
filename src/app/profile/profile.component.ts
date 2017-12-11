@@ -1,17 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AuthService } from '../authenticate.service';
 import { Router } from '@angular/router';
-
-interface Profile {
-  address: object;
-  company: object;
-  email: string;
-  id: number;
-  name: string;
-  phone: string;
-  username: string;
-  website: string;
-}
+import { Profile } from '../profile';
 
 @Component({
   selector: 'app-profile',
@@ -25,8 +15,7 @@ export class ProfileComponent implements OnInit {
   constructor( private authService: AuthService, private router: Router ) { }
 
   ngOnInit() {
-    console.log(this.profile);
-    console.log(this.authService.isLoggedIn);
+
   }
 
   logout() {

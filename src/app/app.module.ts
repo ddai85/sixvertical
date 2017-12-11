@@ -11,6 +11,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { PostsComponent } from './posts/posts.component'; 
 import { AuthService } from './authenticate.service';
 import { FetchDataService } from './fetch-data.service';
+import { PostComponent } from './post/post.component';
 
 
 
@@ -20,7 +21,8 @@ import { FetchDataService } from './fetch-data.service';
     LoginComponent,
     HomepageComponent,
     ProfileComponent,
-    PostsComponent
+    PostsComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,

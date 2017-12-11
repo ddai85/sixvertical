@@ -1,0 +1,17 @@
+<div class="container pb-3">
+  <div class="card" style="width:100%">
+    <div class="card-body">
+      <h5 class="card-title"> {{mainPost.title}} </h5>
+      <p class="card-text"> {{mainPost.body}} </p>
+    </div>
+    <button (click)="toggleText()" data-toggle="collapse" [attr.data-target]="'#' + mainPost.id">{{buttonText}}</button>
+    <div class="collapse" id="{{mainPost.id}}">
+      <ul class="list-group list-group-flush"></ul>
+      <li class="list-group-item" *ngFor="let comment of comments">
+        <p><b>{{comment.name}}</b> - {{comment.email}}</p>
+        <p>{{comment.body}}</p>
+      </li>
+    </div>
+  </div>
+
+</div>
