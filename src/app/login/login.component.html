@@ -1,0 +1,44 @@
+<div class="container pt-5">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <h2 class="text-center"> Welcome to Dunder-Mifflin </h2>
+      <br>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <p class="text-center"> Welcome to the Dunder-Mifflin internal network. </p>
+      <p class="text-center"> Please enter a username to view your posts and comments. </p>
+    </div>
+  </div>
+  <br>
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <div class="input-group">
+        <input 
+          type="email" 
+          email 
+          name="loginEmail" 
+          [(ngModel)]="loginEmail" 
+          #emailVal="ngModel" 
+          class="form-control" 
+          placeholder="Email" 
+          aria-label="Email" 
+          aria-describedby="basic-addon1"> 
+      </div>
+      <div class="text-danger" *ngIf="emailVal.errors?.email"> 
+        Invalid Email Format
+      </div> 
+    </div>
+  </div>
+  <br>
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <button type="button" *ngIf="!emailVal.errors?.email" (click)="onInput(emailVal)" class="btn btn-lg btn-light btn-block">Primary</button>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+    </div>
+  </div>
+</div>
