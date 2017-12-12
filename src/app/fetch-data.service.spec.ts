@@ -1,22 +1,20 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { AuthService } from './authenticate.service';
-import { Injectable } from '@angular/core';
+import { FetchDataService } from './fetch-data.service';
 import { HttpClient, HttpHeaders, HttpHandler } from '@angular/common/http';
-import { Profile } from './profile';
 
-describe('AuthService', () => {
+describe('FetchDataService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [
-        AuthService,
+        FetchDataService,
         HttpClient,
         HttpHandler
       ]
     });
   });
 
-  it('should be created', inject([AuthService], (service: AuthService) => {
+  it('should be created', inject([FetchDataService], (service: FetchDataService) => {
     expect(service).toBeTruthy();
   }));
 });

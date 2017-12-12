@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../authenticate.service';
 import { Router } from '@angular/router';
 
+interface Email {
+  value: string;
+}
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,13 +14,11 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   loginEmail: string;
   emailValid: boolean;
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor( private authService: AuthService, private router: Router ) { }
 
-  ngOnInit() {
+  ngOnInit() { }
 
-  }
-
-  onInput(email: object) {
+  onInput(email: Email) {
     this.authService.authenticateUser(email.value, (success) => {
       if (success) {
         this.router.navigate(['/homepage']);

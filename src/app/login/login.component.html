@@ -34,7 +34,12 @@
   <br>
   <div class="row justify-content-center">
     <div class="col-4">
-      <button type="button" *ngIf="!emailVal.errors?.email" (click)="onInput(emailVal)" class="btn btn-lg btn-light btn-block">Primary</button>
+      <button 
+        type="button" 
+        *ngIf="!emailVal.errors?.email" 
+        (click)="onInput(emailVal)" 
+        class="btn btn-lg btn-light btn-block">Primary
+      </button>
     </div>
   </div>
   <div class="row justify-content-center">
