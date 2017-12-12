@@ -3,10 +3,13 @@
     <img class="card-img-top mx-auto" style="width:50%" src="assets/profile.jpg" alt="Card image cap">
     <div class="card-body">
       <h4 class="card-title"> {{profile.name}} </h4>
+      <img class="location" align="left" hspace="10" src="assets/location.png">
       <pre class="card-text">{{profile.address.street}}, {{profile.address.suite}}
 {{profile.address.city}}, {{profile.address.zipcode}} </pre>
-      <p class="card-text"><b>Phone</b> {{profile.phone}} </p>
-      <p class="card-text"><b>Email</b> {{profile.email}} </p>
+      <img class="phone" align="left" hspace="10" src="assets/phone.png">
+      <p class="card-text"> {{profile.phone}} </p>
+      <img class="email" align="left" hspace="10" src="assets/email.png">
+      <p class="card-text"> {{profile.email}} </p>
       <button class="btn btn-light" (click)="logout()">Logout</button>
     </div>
   </div>

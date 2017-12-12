@@ -15,7 +15,6 @@ export class PostComponent implements OnInit {
 
   ngOnInit() {
     this.mainPost = this.post[0];
-
     for (let i = 1; i < this.post.length; i++) {
       this.comments.push(this.post[i]);
     }

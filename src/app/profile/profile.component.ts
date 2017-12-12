@@ -14,15 +14,10 @@ export class ProfileComponent implements OnInit {
 
   constructor( private authService: AuthService, private router: Router ) { }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() { }
 
   logout() {
-    console.log('Im logging out');
     this.authService.logout();
     this.router.navigate(['/login']);
-
   }
-
 }
